@@ -1,0 +1,22 @@
+{
+  "name": "cfx.vue",
+  "version": "0.0.0",
+  "scripts": {
+    "lernaclean": "lerna clean --yes",
+    "lernabootstrap": "lerna bootstrap",
+    "rebootstrap": "npm run lernaclean; npm run lernabootstrap",
+    "cleanall": "lerna run clean; lerna exec -- rm -rf ./dist ./yarn*; npm run lernaclean",
+    "rebootall": "npm run cleanall; npm run lernabootstrap",
+    "autod": "autod",
+    "autodall": "lerna exec -- autod",
+    "updated": "lerna run autod; lerna updated"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "cfx.require-plugin-coffee": "^0.2.13",
+    "lerna": "^3.0.6"
+  },
+  "dependencies": {
+
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "vue-play-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "play": "vue-play start",
+    "play:build": "vue-play build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vue-play": "^3.1.1",
+    "vue-play-cli": "^1.1.1"
+  },
+  "dependencies": {
+    "vue": "^2.2.2"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "lerna": "3.0.6",
+  "npmClient": "yarn",
+  "packages": [
+    "packages/*"
+  ],
+  "command": {
+    "publish": {
+      "ignoreChanges": [
+        "example*"
+      ]
+    }
+  },
+  "version": "0.0.0"
+}
