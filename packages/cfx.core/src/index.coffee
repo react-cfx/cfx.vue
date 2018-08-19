@@ -4,11 +4,25 @@ cfxify = ({
 }) =>
   if createElement?
     (e) => (args...) =>
-      createElement.apply null
-      , [
-        e
-        args...
-      ]
+
+      otherArgs =
+        if args[1]?
+        then(
+          unless Array.isArray args[1]
+          then [
+            args[1]
+            (
+              if args.length >= 3
+              then [ args[2..] ]
+              else []
+            )...
+          ]
+          else args[1..]
+        )
+        else []
+        
+      createElement e, args[0], otherArgs
+
   # return createFactory e if typeof e is 'string'
   else if createFactory?
     (e) => createFactory e
