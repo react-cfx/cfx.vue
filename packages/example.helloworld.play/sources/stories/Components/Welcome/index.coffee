@@ -57,11 +57,12 @@ export default cfxvue 'welcome'
 
           c.p {}
           , [
-            'We\'ve added some basic stories inside the'
+            'We\'ve added some basic stories inside the '
             c.code
               attr:
                 class: style.node
             , 'src/stories'
+            ' '
             """
             directory.
             A story is a single state of one or more UI components. You can have as many stories as you want.
