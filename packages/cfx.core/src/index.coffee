@@ -20,7 +20,7 @@ cfxify = ({
           else args[1..]
         )
         else []
-        
+
       createElement e, args[0], otherArgs
 
   # return createFactory e if typeof e is 'string'
