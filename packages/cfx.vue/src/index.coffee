@@ -1,26 +1,37 @@
 import Vue from 'vue'
 import cfxify from 'cfx.vue.core'
 
-export default (ComponentName, Component) =>
+cfxRender = (_Component) =>
 
-  getComponentRender = (_Component) =>
-    (createElement) =>
-      _Component
-        cfxify: (waitToCfxify) => cfxify {
+  (createElement) ->
+
+    self = @
+
+    _Component.call self
+    ,
+      cfxify: (waitToCfxify) =>
+        cfxify {
           createElement
-        }, waitToCfxify
+        }
+        , waitToCfxify
+
+export {
+  cfxRender
+}
+
+export default (ComponentName, Component) =>
 
   componentType = typeof Component
 
   Vue.component ComponentName
   ,
     if componentType is 'function'
-    then render: getComponentRender Component
+    then render: cfxRender Component
     else (
       if Component.render?
       then {
         Component...
-        render: getComponentRender Component.render
+        render: cfxRender Component.render
       }
       else Component
     )

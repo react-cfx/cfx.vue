@@ -69,6 +69,7 @@ export default (
   }
   waiToCfxify
 ) =>
+
   _cfxify = cfxify {
     createElement
     createFactory

@@ -4,6 +4,7 @@ import store from './store'
 import router from './router'
 
 export default function ({spots = []} = {}) {
+
   store.registerModule('app', {
     state: {
       spots

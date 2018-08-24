@@ -1,7 +1,5 @@
 import cfxvue from 'cfx.vue.vue'
 import style from './style'
-# import VApp from 'vuetify/es5/components/VApp'
-# import { VContainer } from 'vuetify/es5/components/VGrid'
 
 export default cfxvue 'welcome'
 ,
@@ -11,11 +9,9 @@ export default cfxvue 'welcome'
       default: =>
         console.log 'Welcome to storybook!'
 
-  render: ({ cfxify }) =>
+  render: ({ cfxify }) ->
 
     c = cfxify {
-      # VApp
-      # VContainer
       'v-app'
       'v-container'
       'div'
@@ -29,11 +25,11 @@ export default cfxvue 'welcome'
     c['v-app'] {}
     ,
       c['v-container']
-        attr:
-          fluid: true 
+        props:
+          fluid: true
       ,
-        c.div {} 
-          attr:
+        c.div {}
+          attrs:
             class: style.main
         , [
 
@@ -46,7 +42,7 @@ export default cfxvue 'welcome'
           , [
             'The repo for this project exists here '
             c.a
-              attr:
+              attrs:
                 class: style.link
                 href: 'https://github.com/white-rabbit-japan/vuetify-storyboard-boilerplate'
                 target: '_blank'
@@ -59,8 +55,8 @@ export default cfxvue 'welcome'
           , [
             'We\'ve added some basic stories inside the '
             c.code
-              attr:
-                class: style.node
+              attrs:
+                class: style.note
             , 'src/stories'
             ' '
             """
@@ -74,15 +70,21 @@ export default cfxvue 'welcome'
           , [
             'See these sample '
             c.a
-              attr:
+              attrs:
                 class: style.link
-                '@click.prevent': 'showApp'
+              props:
                 role: 'button'
                 tabIndex: '0'
+              on:
+                click: (
+                  (e) ->
+                    e.preventDefault()
+                    @showApp()
+                ).bind @
             , 'stories'
             ' for a component called '
             c.code
-              attr:
+              attrs:
                 class: style.code
             , 'Button'
             '.'
@@ -97,12 +99,12 @@ export default cfxvue 'welcome'
             """
             ' '
             c.code
-              attr:
+              attrs:
                 class: 'code'
             , 'Button'
             ' component located at '
             c.code
-              attr:
+              attrs:
                 class: 'code'
             , 'src/stories/Button.js'
             '.)'
@@ -116,8 +118,8 @@ export default cfxvue 'welcome'
             """
             ' '
             c.a
-              attr:
-                class: 'link'
+              attrs:
+                class: style.link
                 href: 'https://github.com/storybooks/storybook'
                 target: '_blank'
                 rel: 'noopener noreferrer'
@@ -126,14 +128,14 @@ export default cfxvue 'welcome'
           ]
 
           c.p
-            attr:
+            attrs:
               class: 'note'
           , [
             c.b {} 
             , 'NOTE: '
             'Have a look at the '
             c.code
-              attr:
+              attrs:
                 class: 'code'
             , '.storybook/webpack.config.js'
             ' to add webpack loaders and plugins you are using in this project.'

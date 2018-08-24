@@ -2,23 +2,23 @@ import { css } from 'emotion'
 
 export default
 
-  main:
+  main: css
     margin: '15px'
     maxWidth: '600px'
     lineHeight: '1.4'
     fontFamily: 'Helvetica Neue, Helvetica, Segoe UI, Arial, freesans'
     sansSerif: true
 
-  logo:
+  logo: css
     width: '200px'
 
-  link:
+  link: css
     color: '#1474f3'
     textDecoration: 'none'
     borderBottom: '1px solid #1474f3'
     paddingBottom: '2px'
 
-  code:
+  code: css
     fontSize: '15px'
     fontWeight: '600'
     padding: '2px 5px'
@@ -27,5 +27,5 @@ export default
     backgroundColor: '#f3f2f2'
     color: '#3a3a3a'
 
-  note:
+  note: css
     opacity: '0.5'
