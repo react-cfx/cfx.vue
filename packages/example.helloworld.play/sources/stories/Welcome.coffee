@@ -5,6 +5,31 @@ import { play } from 'vue-play'
 
 import welcome from './Components/Welcome/index.vue'
 
+locationHref = ({
+  spot
+  scenario
+}) =>
+  parent.top.location.href = [
+    '/?'
+    queryString.stringify {
+      spot
+      scenario
+    }
+  ].join ''
+
+postMessage = ({
+  spot
+  scenario
+}) =>
+  window.postMessage
+    type: 'UPDATE_ROUTE'
+    payload: {
+      spot
+      scenario
+    }
+  ,
+    location.origin
+
 linkTo = (
   spot
   scenario
@@ -26,13 +51,10 @@ linkTo = (
   return unless typeof spot is 'string'
   return unless typeof scenario is 'string'
 
-  parent.top.location.href = [
-    '/?'
-    queryString.stringify {
-      spot
-      scenario
-    }
-  ].join ''
+  postMessage {
+    spot
+    scenario
+  }
 
 export default ->
 
