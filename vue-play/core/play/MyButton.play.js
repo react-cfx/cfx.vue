@@ -14,6 +14,16 @@ play('Button')
     methods: {
       log() {
         this.$store.state.count++
+        // window.postMessage({
+        window.top.postMessage({
+          type: 'UPDATE_ROUTE',
+          payload: {
+            spot: 'The Box Component',
+            scenario: 'dash border'
+          }
+        }
+        , location.origin
+        )
       }
     }
   })

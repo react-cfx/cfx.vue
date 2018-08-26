@@ -42,6 +42,9 @@ export default {
     activateSpot({commit, getters}, spot) {
       const {scenario} = getters.visibleScenarios[spot][0]
       router.push({query: {spot, scenario}})
+    },
+    goRouter({commit}, {spot, scenario}) {
+      router.push({query: {spot, scenario}})
     }
   },
   getters: {

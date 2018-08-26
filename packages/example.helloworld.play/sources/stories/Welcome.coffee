@@ -1,4 +1,4 @@
-import queryString from 'query-string'
+import qs from 'query-string'
 import { cfxRender } from 'cfx.vue.vue'
 
 import { play } from 'vue-play'
@@ -11,7 +11,7 @@ locationHref = ({
 }) =>
   parent.top.location.href = [
     '/?'
-    queryString.stringify {
+    qs.stringify {
       spot
       scenario
     }
@@ -52,6 +52,7 @@ linkTo = (
   return unless typeof scenario is 'string'
 
   postMessage {
+  # locationHref {
     spot
     scenario
   }

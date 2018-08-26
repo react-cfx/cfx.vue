@@ -76,6 +76,7 @@
         'toggleHelp',
         'filterToys',
         'activateSpot',
+        'goRouter',
         'toggleDeviceToolbar'
       ]),
       filter: debounce(function ({target}) {
@@ -115,6 +116,22 @@
         }
         return this.currentScenario.spot === name
       }
+    },
+    created() {
+      self = this;
+      window.top.addEventListener('message', ({data}) => {
+        if (data.type === 'UPDATE_ROUTE') {
+          console.log(data)
+          const {
+            spot,
+            scenario
+          } = data.payload
+          self.goRouter({
+            spot,
+            scenario
+          })
+        }
+      })
     }
   }
 </script>
