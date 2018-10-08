@@ -1,0 +1,18 @@
+{
+  "name": "cfx.vue.play",
+  "version": "0.0.0",
+  "devDependencies": {
+    "@vue/cli": "^3.0.4",
+    "@vue/cli-service-global": "^3.0.4",
+    "autod": "^3.0.1",
+    "babel-loader": "^8.0.4",
+    "cfx.simple-build-tool": "^0.0.13",
+    "shelljs": "^0.8.2"
+  },
+  "dependencies": {
+    "cfx.require-plugin-coffee": "^0.2.13",
+    "cfx.vue.vue": "^0.0.0",
+    "ddeyes": "^0.2.13",
+    "vue": "^2.5.17"
+  }
+}

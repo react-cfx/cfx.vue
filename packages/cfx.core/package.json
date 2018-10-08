@@ -2,16 +2,17 @@
   "name": "cfx.vue.core",
   "version": "0.0.0",
   "main": "dist/index.js",
-  "moudle": "dist/es/index.js",
+  "module": "dist/es/index.js",
   "scripts": {
     "autod": "autod",
-    "clean": "rm -rf ./dist",
+    "clean": "rimraf ./dist",
     "build": "gulp build",
     "rebuild": "gulp rebuild",
     "test": "npm run rebuild; ./test/index.coffee",
     "postinstall": "npm run build"
   },
   "dependencies": {
+    "@babel/runtime": "~7.1.2",
     "cfx.require-plugin-coffee": "~0.2.13",
     "cfx.rollup-plugin-coffee2": "~0.2.13",
     "del": "~3.0.0",
@@ -19,7 +20,7 @@
     "gulp-better-rollup": "~3.3.0",
     "gulp-rename": "~1.4.0",
     "gulp-sequence": "~1.0.0",
-    "rollup": "~0.64.1",
+    "rollup": "~0.66.4",
     "rollup-plugin-cleanup": "~3.0.0"
   },
   "devDependencies": {

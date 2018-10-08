@@ -2,10 +2,10 @@
   "name": "cfx.vue.vue",
   "version": "0.0.0",
   "main": "dist/index.js",
-  "moudle": "dist/es/index.js",
+  "module": "dist/es/index.js",
   "scripts": {
     "autod": "autod",
-    "clean": "rm -rf ./dist",
+    "clean": "rimraf ./dist",
     "build": "gulp build",
     "rebuild": "gulp rebuild",
     "test": "npm run rebuild; ./test/index.coffee",
@@ -20,9 +20,9 @@
     "gulp-better-rollup": "~3.3.0",
     "gulp-rename": "~1.4.0",
     "gulp-sequence": "~1.0.0",
-    "rollup": "~0.64.1",
+    "rollup": "~0.66.4",
     "rollup-plugin-cleanup": "~3.0.0",
-    "vue": "^2.5.17"
+    "vue": "~2.5.17"
   },
   "devDependencies": {
     "autod": "^3.0.1",

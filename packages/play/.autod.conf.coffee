@@ -6,28 +6,20 @@ export default
   plugin: ''
   test: []
   keep: [
-    'cfx.vue.core'
+    'cfx.vue.vue'
   ]
   dep: [
     'cfx.require-plugin-coffee'
-    'cfx.rollup-plugin-coffee2'
-    'del'
-    'gulp'
-    'gulp-better-rollup'
-    'gulp-rename'
-    'gulp-sequence'
-    'rollup'
-    'rollup-plugin-cleanup'
+    'ddeyes'
     'vue'
   ]
   devdep: [
     'autod'
-    'ddeyes'
-    'rimraf'
+    'cfx.simple-build-tool'
+    'shelljs'
     'shelljs'
   ]
   exclude: [
     './node_modules'
     './.autod.conf.js'
-    './dist'
   ]

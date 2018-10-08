@@ -5,6 +5,9 @@ export default
   devprefix: '^'
   plugin: ''
   test: []
+  keep: [
+    'cfx.vue.vue'
+  ]
   dep: [
     'cfx.require-plugin-coffee'
     'del'
@@ -16,14 +19,14 @@ export default
     'reset-css'
     'rollup'
     'rollup-plugin-cleanup'
-    '@storybook/addon-info'
-    '@storybook/addon-links'
-    '@storybook/addon-options'
-    "@storybook/addon-actions"
-    "@storybook/addon-events"
-    "@storybook/addon-knobs"
-    "@storybook/addon-notes"
-    '@storybook/vue'
+    # '@storybook/addon-info'
+    # '@storybook/addon-links'
+    # '@storybook/addon-options'
+    # "@storybook/addon-actions"
+    # "@storybook/addon-events"
+    # "@storybook/addon-knobs"
+    # "@storybook/addon-notes"
+    # '@storybook/vue'
     'emotion'
     'vue-loader'
   ]
