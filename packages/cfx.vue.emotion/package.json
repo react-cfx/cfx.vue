@@ -1,5 +1,5 @@
 {
-  "name": "cfx.vue.play",
+  "name": "cfx.vue.emotion",
   "version": "0.0.0",
   "devDependencies": {
     "@vue/cli": "^3.0.4",
@@ -7,6 +7,7 @@
     "autod": "^3.0.1",
     "babel-loader": "^8.0.4",
     "cfx.simple-build-tool": "^0.0.13",
+    "emotion": "^9.2.12",
     "shelljs": "^0.8.2"
   },
   "dependencies": {

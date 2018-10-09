@@ -14,10 +14,13 @@ export default
     'vue'
   ]
   devdep: [
+    '@vue/cli'
+    '@vue/cli-service-global'
+    'babel-loader'
     'autod'
     'cfx.simple-build-tool'
     'shelljs'
-    'shelljs'
+    'emotion'
   ]
   exclude: [
     './node_modules'
