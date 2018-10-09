@@ -3,11 +3,13 @@ import {
   injectGlobal
 } from 'emotion'
 import {
-  c
+  cs
+
   px
   em
   pct
   dot
+
   hsla
 } from '../../../utils/emotion'
 
@@ -38,7 +40,7 @@ body {
 """
 
 export default css
-  border: c [
+  border: cs [
     px 10
     'solid'
     hsla [
@@ -54,12 +56,12 @@ export default css
   # /* styling */
   'max-width': em 20
   padding: em 2
-  margin: c [
+  margin: cs [
     em 2
     'auto'
     0
   ]
-  font: c [
+  font: cs [
     "#{pct 100}/1.5"
     'sans-serif'
   ]

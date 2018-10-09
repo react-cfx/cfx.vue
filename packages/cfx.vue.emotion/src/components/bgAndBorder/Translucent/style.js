@@ -7,7 +7,7 @@ import {
 } from 'emotion';
 
 import {
-  c,
+  cs,
   px,
   em,
   pct,
@@ -21,12 +21,12 @@ bgImg = ['https://unsplash.sxlcdn.com', ['photo-1489034105530-f46eb91f1e27', ['i
 injectGlobal(`body {\n  background: url(${bgImg});\n}`);
 
 export default css({
-  border: c([px(10), 'solid', hsla([0, pct(0), pct(100), dot(5)])]),
+  border: cs([px(10), 'solid', hsla([0, pct(0), pct(100), dot(5)])]),
   background: 'white',
   'background-clip': 'padding-box',
   // /* styling */
   'max-width': em(20),
   padding: em(2),
-  margin: c([em(2), 'auto', 0]),
-  font: c([`${pct(100)}/1.5`, 'sans-serif'])
+  margin: cs([em(2), 'auto', 0]),
+  font: cs([`${pct(100)}/1.5`, 'sans-serif'])
 });

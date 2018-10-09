@@ -1,4 +1,4 @@
-funcWrapper = (funcName, argsCount) =>
+HOCfunc = (funcName, argsCount) =>
   (args...) =>
     if args.length is 1
       if (
@@ -17,20 +17,26 @@ funcWrapper = (funcName, argsCount) =>
     else
       "#{funcName}(#{args.join ', '})"
 
+HOCconcat = (concatName) =>
+  (args...) =>
+    return args[0].join concatName if args.length is 1
+    args.join concatName
+
 px = (n) => "#{n}px"
 em = (n) => "#{n}em"
 pct = (n) => "#{n}%"
 dot = (n) => ".#{n}" 
 
-c = (args...) =>
-  return args[0].join ' ' if args.length is 1
-  args.join ' '
+rgb = HOCfunc 'rgb', 3
+rgba = HOCfunc 'rgba', 4
+hsla = HOCfunc 'hsla', 4
 
-rgb = funcWrapper 'rgb', 3
-hsla = funcWrapper 'hsla', 4
+cs = HOCconcat ' '
+cc = HOCconcat ',' # Comma
 
 export {
-  c
+  cs
+  cc
 
   px
   em
@@ -38,11 +44,13 @@ export {
   dot
 
   rgb
+  rgba
   hsla
 }
 
 export default {
-  c
+  cs
+  cc
 
   px
   em
@@ -50,5 +58,6 @@ export default {
   dot
 
   rgb
+  rgba
   hsla
 }
