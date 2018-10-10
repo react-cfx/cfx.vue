@@ -6,9 +6,17 @@ import style from './style';
 export default cfxvue('app', ({cfxify}) => {
   var c;
   c = cfxify({'div': 'div'});
-  return c.div({
+  return c.div({}, c.div({
     attrs: {
-      class: style
+      class: style.boxShadow
     }
-  });
+  }), c.div({
+    attrs: {
+      class: style.outline
+    }
+  }), c.div({
+    attrs: {
+      class: style.outlineOffset
+    }
+  }));
 });

@@ -8,6 +8,17 @@ export default cfxvue 'app'
     'div'
   }
 
-  c.div
-    attrs:
-      class: style
+  c.div {}
+  ,
+
+    c.div
+      attrs:
+        class: style.boxShadow
+
+    c.div
+      attrs:
+        class: style.outline
+
+    c.div
+      attrs:
+        class: style.outlineOffset
