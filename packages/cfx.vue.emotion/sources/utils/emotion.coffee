@@ -1,4 +1,4 @@
-HOCfunc = (funcName, argsCount) =>
+HOCfunc = (funcName, argsCount = 1) =>
   (args...) =>
     if args.length is 1
       if (
@@ -8,11 +8,13 @@ HOCfunc = (funcName, argsCount) =>
       ) 
         _args = args[0]
       else
-        _args = [
-          args[0]
-          args[0]
-          args[0]
-        ]
+        _args = [1..argsCount]
+        .reduce (r) =>
+          [
+            r...
+            args[0]
+          ]
+        , []
       "#{funcName}(#{_args.join ', '})"
     else
       "#{funcName}(#{args.join ', '})"
@@ -26,6 +28,8 @@ px = (n) => "#{n}px"
 em = (n) => "#{n}em"
 pct = (n) => "#{n}%"
 dot = (n) => ".#{n}" 
+
+url = HOCfunc 'url'
 
 rgb = HOCfunc 'rgb', 3
 rgba = HOCfunc 'rgba', 4
@@ -43,6 +47,8 @@ export {
   pct
   dot
 
+  url
+
   rgb
   rgba
   hsla
@@ -56,6 +62,8 @@ export default {
   em
   pct
   dot
+
+  url
 
   rgb
   rgba
