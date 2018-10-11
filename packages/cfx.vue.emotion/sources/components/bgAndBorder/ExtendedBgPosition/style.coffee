@@ -7,22 +7,37 @@ import {
   cs
 } from '../../../utils/emotion'
 
-export default css
+baseImg = 'http://csssecrets.io/images/code-pirate.svg'
+baseStyle = # /* Styling */
   background: cs [
-    url 'http://csssecrets.io/images/code-pirate.svg'
+    url baseImg
     'no-repeat'
     'bottom'
     'right'
     '#58a'
   ]
-  'background-origin': 'content-box'
-  
-  # /* Styling */
+  padding: px 10
   'max-width': em 10
   'min-height': em 5
-  padding: px 10
   color: 'white'
   font: cs [
     "#{pct 100}/1"
     'sans-serif'
   ]
+
+export default
+
+  position: css {
+    baseStyle...
+    'background-position': cs [
+      'right'
+      px 10
+      'bottom'
+      px 10
+    ]
+  }
+
+  origin: css {
+    baseStyle...
+    'background-origin': 'content-box'
+  }
