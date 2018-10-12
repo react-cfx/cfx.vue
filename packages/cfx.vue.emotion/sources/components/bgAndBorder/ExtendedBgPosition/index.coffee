@@ -20,3 +20,8 @@ export default cfxvue 'app'
       attrs:
         class: style.origin
     , 'Code Pirate'
+
+    c.div
+      attrs:
+        class: style.calc
+    , 'Code Pirate'

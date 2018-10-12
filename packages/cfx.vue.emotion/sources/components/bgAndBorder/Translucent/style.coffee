@@ -10,6 +10,8 @@ import {
   pct
   dot
 
+  dvd
+
   hsla
 } from '../../../utils/emotion'
 
@@ -62,6 +64,6 @@ export default css
     0
   ]
   font: cs [
-    "#{pct 100}/1.5"
+    dvd (pct 100), 1.5
     'sans-serif'
   ]

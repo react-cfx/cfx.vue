@@ -34,9 +34,7 @@ export default
         px 5
         px 15
         rgba [
-          0
-          0
-          0
+          0, 0, 0
           dot 6
         ]
       ]

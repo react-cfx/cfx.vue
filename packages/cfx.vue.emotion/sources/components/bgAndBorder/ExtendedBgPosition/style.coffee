@@ -4,6 +4,9 @@ import {
   em
   pct
   url
+  calc
+  mus
+  dvd
   cs
 } from '../../../utils/emotion'
 
@@ -17,11 +20,15 @@ baseStyle = # /* Styling */
     '#58a'
   ]
   padding: px 10
+  margin: cs [
+    px 20
+    0
+  ]
   'max-width': em 10
   'min-height': em 5
   color: 'white'
   font: cs [
-    "#{pct 100}/1"
+    dvd (pct 100), 1
     'sans-serif'
   ]
 
@@ -40,4 +47,16 @@ export default
   origin: css {
     baseStyle...
     'background-origin': 'content-box'
+  }
+
+  calc: css {
+    baseStyle...
+    'background-position': cs [
+      calc(
+        mus (pct 100), (px 10)
+      )
+      calc(
+        mus (pct 100), (px 10)
+      )
+    ]
   }

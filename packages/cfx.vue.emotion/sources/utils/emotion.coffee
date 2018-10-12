@@ -29,7 +29,13 @@ em = (n) => "#{n}em"
 pct = (n) => "#{n}%"
 dot = (n) => ".#{n}" 
 
+add = (args...) => "#{args[0]} + #{args[1]}"
+mus = (args...) => "#{args[0]} - #{args[1]}"
+mtp = (args...) => "#{args[0]} * #{args[1]}"
+dvd = (args...) => "#{args[0]} / #{args[1]}"
+
 url = HOCfunc 'url'
+calc = HOCfunc 'calc'
 
 rgb = HOCfunc 'rgb', 3
 rgba = HOCfunc 'rgba', 4
@@ -48,6 +54,12 @@ export {
   dot
 
   url
+  calc
+
+  add
+  mus
+  mtp
+  dvd
 
   rgb
   rgba
@@ -64,6 +76,12 @@ export default {
   dot
 
   url
+  calc
+
+  add
+  mus
+  mtp
+  dvd
 
   rgb
   rgba
