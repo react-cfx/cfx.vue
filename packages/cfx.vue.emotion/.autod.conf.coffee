@@ -10,8 +10,15 @@ export default
   ]
   dep: [
     'cfx.require-plugin-coffee'
+    'cfx.rollup-plugin-coffee2'
     'ddeyes'
-    'vue'
+    'del'
+    'gulp'
+    'gulp-better-rollup'
+    'gulp-rename'
+    'gulp-sequence'
+    'rollup'
+    'rollup-plugin-cleanup'
   ]
   devdep: [
     '@vue/cli'
@@ -21,8 +28,10 @@ export default
     'cfx.simple-build-tool'
     'shelljs'
     'emotion'
+    'vue'
   ]
   exclude: [
     './node_modules'
     './.autod.conf.js'
+    './src'
   ]

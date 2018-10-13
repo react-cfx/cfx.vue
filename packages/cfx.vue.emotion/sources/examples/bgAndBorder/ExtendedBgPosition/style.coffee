@@ -8,7 +8,7 @@ import {
   mus
   dvd
   cs
-} from '../../../utils/emotion'
+} from '../../../'
 
 baseImg = 'http://csssecrets.io/images/code-pirate.svg'
 baseStyle = # /* Styling */

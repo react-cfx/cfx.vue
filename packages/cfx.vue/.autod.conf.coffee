@@ -11,6 +11,7 @@ export default
   dep: [
     'cfx.require-plugin-coffee'
     'cfx.rollup-plugin-coffee2'
+    'ddeyes'
     'del'
     'gulp'
     'gulp-better-rollup'
@@ -22,7 +23,6 @@ export default
   ]
   devdep: [
     'autod'
-    'ddeyes'
     'rimraf'
     'shelljs'
   ]

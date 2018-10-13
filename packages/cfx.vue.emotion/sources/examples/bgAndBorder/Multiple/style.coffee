@@ -5,7 +5,7 @@ import {
   cs
   dot
   rgba
-} from '../../../utils/emotion'
+} from '../../../'
 
 baseStyle = 
   width: px 100

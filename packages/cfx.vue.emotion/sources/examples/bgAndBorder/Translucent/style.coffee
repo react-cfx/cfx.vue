@@ -13,7 +13,7 @@ import {
   dvd
 
   hsla
-} from '../../../utils/emotion'
+} from '../../../'
 
 # 'http://csssecrets.io/images/stone-art.jpg'
 bgImg = [

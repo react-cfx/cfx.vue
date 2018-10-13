@@ -7,28 +7,16 @@ export default
   test: []
   keep: [
     'cfx.vue.vue'
+    'cfx.vue.emotion'
   ]
   dep: [
     'cfx.require-plugin-coffee'
-    'del'
-    'gulp'
-    'gulp-better-rollup'
-    'gulp-rename'
-    'gulp-sequence'
     'normalize.css'
     'reset-css'
-    'rollup'
-    'rollup-plugin-cleanup'
-    # '@storybook/addon-info'
-    # '@storybook/addon-links'
-    # '@storybook/addon-options'
-    # "@storybook/addon-actions"
-    # "@storybook/addon-events"
-    # "@storybook/addon-knobs"
-    # "@storybook/addon-notes"
-    # '@storybook/vue'
     'emotion'
     'vue-loader'
+    'vue'
+    'vuetify'
   ]
   devdep: [
     'autod'
@@ -39,4 +27,6 @@ export default
   exclude: [
     './node_modules'
     './.autod.conf.js'
+    './src'
+    './.storybook'
   ]

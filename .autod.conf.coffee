@@ -15,4 +15,5 @@ export default
     './packages'
     './node_modules'
     './.autod.conf.js'
+    './demo'
   ]

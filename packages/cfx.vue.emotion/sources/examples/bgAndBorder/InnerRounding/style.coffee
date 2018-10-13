@@ -5,7 +5,7 @@ import {
   dvd
   pct
   cs
-} from '../../../utils/emotion'
+} from '../../../'
 
 baseStyle = 
   background: 'tan'
