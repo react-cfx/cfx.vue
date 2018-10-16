@@ -1,6 +1,8 @@
 {
   "name": "cfx.vue.emotion",
   "version": "0.0.0",
+  "main": "./dist/index.js",
+  "module": "./dist/es/index.js",
   "scripts": {
     "autod": "autod",
     "clean": "rimraf ./dist",
